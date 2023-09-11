@@ -8,7 +8,7 @@ public class Main {
         int anoDeLancamento = 2043;
         //System.out.println("Ano de lançamento: " + anoDeLancamento);
 
-        boolean incluidoNoPlano = true;
+        boolean incluidoNoPlano = false;
         //System.out.println("Incluso no plano: " + incluidoNoPlano);
 
         double avaliacao = 8.5000;
@@ -31,5 +31,11 @@ public class Main {
                 Sinopse: %s
                 """.formatted(filme, anoDeLancamento, incluidoNoPlano, avaliacao, sinopse);
         System.out.println(fichaDoFilme);
+
+        if (incluidoNoPlano) {
+            System.out.println("Filme liberado");
+        } else {
+            System.out.println("Você precisa pagar para acessar esse filme");
+        }
     }
 }
