@@ -17,7 +17,7 @@ public class Desafio {
                                 
                 Operações
                                 
-                1- Consultar saldos
+                1- Consultar saldo
                 2- Receber valor
                 3- Transferir valor
                 4- Sair
@@ -29,6 +29,10 @@ public class Desafio {
             System.out.println(menu.formatted(saldoConta));
             operacao = leitura.nextInt();
             leitura.nextLine();
+
+            if (operacao < 1 || operacao > 4) {
+                System.out.println("Digite uma opção válida!");
+            }
 
             if (operacao == 1) {
                 System.out.println("Saldo da conta: " + saldoConta);
